@@ -23,7 +23,7 @@ Then (assuming you unzipped them all into `~/src` run:
     cd ~/src/lein-cljsbuild/support && lein install
     cd ~/src/lein-cljsbuild/plugin && lein install
 
-### Leinignen Support
+### Leiningen Support
 
 If you want full leiningen support (such as `lein test` and AOT compilation) you'll need the modified version of leiningen and its dependencies as well:
 
