@@ -1,6 +1,6 @@
 # Setting Up Feature Expressions
 
-Feature expressions are an new feature of Clojure targeted for release in the not-too distant future. Read all about them here: http://dev.clojure.org/display/design/Feature+Expressions
+Feature expressions are a new feature of Clojure targeted for release in the not-too distant future. Read all about them here: http://dev.clojure.org/display/design/Feature+Expressions
 
 Impatient fellow that I am, I really wanted to start trying them out, but the patches haven't been applied to the official repositories yet.
 
@@ -22,6 +22,17 @@ Then (assuming you unzipped them all into `~/src` run:
     cd ~/src/lein-cljsbuild/cljs-compat && lein install
     cd ~/src/lein-cljsbuild/support && lein install
     cd ~/src/lein-cljsbuild/plugin && lein install
+
+### Leinignen Support
+
+If you want full leiningen support (such as `lein test` and AOT compilation) you'll need the modified version of leiningen and its dependencies as well:
+
+    https://github.com/levand/leiningen.git
+    https://github.com/levand/bultitude.git
+
+Checkout the `feature-expressions` branch in each of these repositories, and install as per leiningen's contribution instructions.
+
+`lein test` is known to work. `lein compile` should probably work but is untested.
 
 # Running the hello-world
 
